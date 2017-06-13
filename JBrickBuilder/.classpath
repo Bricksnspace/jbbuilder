@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="jBrickBuilder/DrawHelpers.java|jBrickBuilder/StatusIcon.java|jBrickBuilder/JSimpleGeom.java|jBrickBuilder/PartToolbar.java|jBrickBuilder/MyPreferences.java|jBrickBuilder/LDFlexPartChooser.java|jBrickBuilder/AppGlobalSettings.java|jBrickBuilder/BusyDialog.java" kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/LDraw3D"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/LDrawLib"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/JSimple3DGeom"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/SimpleUndo"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/LDEditor"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/LDPovRay"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/AppSettings"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/BusyDialog"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

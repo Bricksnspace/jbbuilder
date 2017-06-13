@@ -1,0 +1,22 @@
+README for JBrickBuilder 0.4.2 beta
+
+News
+- Building STEP support (experimental)
+
+Bugfix
+- weird/wrong part orientation when auto-align connections (FIXED)
+- some functions not working with autoconnect off (FIXED)
+- wrong part placement handling on repeat function disabled
+
+Notes
+- to run program you need Java runtime 6 or newer
+- you need only the JAR
+- runme.sh is an helper for Unix/Linux platform where JAR 
+    is not considered "executable" (i.e. does not starts with a double click)
+
+- version 0.1.0 connection database is incompatible: please update at first run.
+
+
+Please read manual for installation and first run instructions.
+
+

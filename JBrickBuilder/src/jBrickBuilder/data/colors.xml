@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--LDraw color map: 19/04/17 16.30-->
+<colorgroups>
+<color id="0" inuse="1" name="Black" group="SOLID"></color>
+<color id="72" inuse="1" name="Dark Bluish Gray" group="SOLID"></color>
+<color id="148" inuse="1" name="Pearl Dark Gray" group="PEARL"></color>
+<color id="71" inuse="1" name="Light Bluish Gray" group="SOLID"></color>
+<color id="15" inuse="1" name="White" group="SOLID"></color>
+<color id="47" inuse="1" name="Trans Clear" group="TRANSPARENT"></color>
+<color id="329" inuse="1" name="Glow In Dark White" group="MILKY"></color>
+<color id="28" inuse="1" name="Dark Tan" group="SOLID"></color>
+<color id="308" inuse="1" name="Dark Brown" group="SOLID"></color>
+<color id="40" inuse="1" name="Trans Black" group="TRANSPARENT"></color>
+<color id="70" inuse="1" name="Reddish Brown" group="SOLID"></color>
+<color id="86" inuse="1" name="Dark Flesh" group="SOLID"></color>
+<color id="92" inuse="1" name="Flesh" group="SOLID"></color>
+<color id="484" inuse="1" name="Dark Orange" group="SOLID"></color>
+<color id="19" inuse="1" name="Tan" group="SOLID"></color>
+<color id="78" inuse="1" name="Light Flesh" group="SOLID"></color>
+<color id="4" inuse="1" name="Red" group="SOLID"></color>
+<color id="36" inuse="1" name="Trans Red" group="TRANSPARENT"></color>
+<color id="320" inuse="1" name="Dark Red" group="SOLID"></color>
+<color id="25" inuse="1" name="Orange" group="SOLID"></color>
+<color id="38" inuse="1" name="Trans Neon Orange" group="TRANSPARENT"></color>
+<color id="57" inuse="1" name="Trans Orange" group="TRANSPARENT"></color>
+<color id="191" inuse="1" name="Bright Light Orange" group="SOLID"></color>
+<color id="14" inuse="1" name="Yellow" group="SOLID"></color>
+<color id="46" inuse="1" name="Trans Yellow" group="TRANSPARENT"></color>
+<color id="226" inuse="1" name="Bright Light Yellow" group="SOLID"></color>
+<color id="10" inuse="1" name="Bright Green" group="SOLID"></color>
+<color id="27" inuse="1" name="Lime" group="SOLID"></color>
+<color id="34" inuse="1" name="Trans Green" group="TRANSPARENT"></color>
+<color id="35" inuse="1" name="Trans Bright Green" group="TRANSPARENT"></color>
+<color id="42" inuse="1" name="Trans Neon Green" group="TRANSPARENT"></color>
+<color id="326" inuse="1" name="Yellowish Green" group="SOLID"></color>
+<color id="2" inuse="1" name="Green" group="SOLID"></color>
+<color id="288" inuse="1" name="Dark Green" group="SOLID"></color>
+<color id="330" inuse="1" name="Olive Green" group="SOLID"></color>
+<color id="378" inuse="1" name="Sand Green" group="SOLID"></color>
+<color id="1" inuse="1" name="Blue" group="SOLID"></color>
+<color id="272" inuse="1" name="Dark Blue" group="SOLID"></color>
+<color id="33" inuse="1" name="Trans Dark Blue" group="TRANSPARENT"></color>
+<color id="73" inuse="1" name="Medium Blue" group="SOLID"></color>
+<color id="321" inuse="1" name="Dark Azure" group="SOLID"></color>
+<color id="379" inuse="1" name="Sand Blue" group="SOLID"></color>
+<color id="43" inuse="1" name="Trans Light Blue" group="TRANSPARENT"></color>
+<color id="41" inuse="1" name="Trans Medium Blue" group="TRANSPARENT"></color>
+<color id="322" inuse="1" name="Medium Azure" group="SOLID"></color>
+<color id="323" inuse="1" name="Light Aqua" group="SOLID"></color>
+<color id="212" inuse="1" name="Bright Light Blue" group="SOLID"></color>
+<color id="26" inuse="1" name="Magenta" group="SOLID"></color>
+<color id="31" inuse="1" name="Lavender" group="SOLID"></color>
+<color id="30" inuse="1" name="Medium Lavender" group="SOLID"></color>
+<color id="52" inuse="1" name="Trans Purple" group="TRANSPARENT"></color>
+<color id="85" inuse="1" name="Dark Purple" group="SOLID"></color>
+<color id="5" inuse="1" name="Dark Pink" group="SOLID"></color>
+<color id="29" inuse="1" name="Bright Pink" group="SOLID"></color>
+<color id="37" inuse="1" name="Trans Dark Pink" group="TRANSPARENT"></color>
+<color id="297" inuse="1" name="Pearl Gold" group="PEARL"></color>
+<color id="179" inuse="1" name="Flat Silver" group="PEARL"></color>
+<color id="16" inuse="0" name="Main Colour" group="INTERNAL"></color>
+<color id="256" inuse="0" name="Rubber Black" group="RUBBER"></color>
+<color id="24" inuse="0" name="Edge Colour" group="INTERNAL"></color>
+<color id="32" inuse="0" name="Trans Black IR Lens" group="INTERNAL"></color>
+<color id="300" inuse="0" name="Metallic Copper" group="METAL"></color>
+<color id="302" inuse="0" name="Glitter Trans Light Blue" group="GLITTER"></color>
+<color id="339" inuse="0" name="Glitter Trans Neon Green" group="GLITTER"></color>
+<color id="64" inuse="0" name="Chrome Black" group="CHROME"></color>
+<color id="66" inuse="0" name="Rubber Trans Yellow" group="RUBBER"></color>
+<color id="67" inuse="0" name="Rubber Trans Clear" group="RUBBER"></color>
+<color id="76" inuse="0" name="Speckle Dark Bluish Gray Silver" group="GLITTER"></color>
+<color id="75" inuse="0" name="Speckle Black Copper" group="GLITTER"></color>
+<color id="83" inuse="0" name="Metallic Black" group="METAL"></color>
+<color id="375" inuse="0" name="Rubber Light Gray" group="RUBBER"></color>
+<color id="406" inuse="0" name="Rubber Dark Blue" group="RUBBER"></color>
+<color id="133" inuse="0" name="Speckle Black Gold" group="GLITTER"></color>
+<color id="132" inuse="0" name="Speckle Black Silver" group="GLITTER"></color>
+<color id="449" inuse="0" name="Rubber Purple" group="RUBBER"></color>
+<color id="511" inuse="0" name="Rubber White" group="RUBBER"></color>
+<color id="504" inuse="0" name="Rubber Flat Silver" group="RUBBER"></color>
+<color id="493" inuse="0" name="Magnet" group="INTERNAL"></color>
+<color id="495" inuse="0" name="Electric Contact Copper" group="INTERNAL"></color>
+<color id="494" inuse="0" name="Electric Contact Alloy" group="INTERNAL"></color>
+<color id="8" inuse="0" name="Dark Gray" group="SOLID"></color>
+<color id="7" inuse="0" name="Light Gray" group="SOLID"></color>
+<color id="151" inuse="0" name="Very Light Bluish Gray" group="SOLID"></color>
+<color id="503" inuse="0" name="Very Light Gray" group="SOLID"></color>
+<color id="496" inuse="0" name="Rubber Light Bluish Gray" group="RUBBER"></color>
+<color id="294" inuse="0" name="Glow In Dark Trans" group="MILKY"></color>
+<color id="79" inuse="0" name="Milky White" group="MILKY"></color>
+<color id="117" inuse="0" name="Glitter Trans Clear" group="GLITTER"></color>
+<color id="183" inuse="0" name="Pearl White" group="PEARL"></color>
+<color id="6" inuse="0" name="Brown" group="SOLID"></color>
+<color id="60" inuse="0" name="Chrome Antique Brass" group="CHROME"></color>
+<color id="335" inuse="0" name="Sand Red" group="SOLID"></color>
+<color id="366" inuse="0" name="Earth Orange" group="SOLID"></color>
+<color id="128" inuse="0" name="Dark Nougat" group="SOLID"></color>
+<color id="178" inuse="0" name="Flat Dark Gold" group="PEARL"></color>
+<color id="216" inuse="0" name="Rust" group="SOLID"></color>
+<color id="84" inuse="0" name="Medium Dark Flesh" group="SOLID"></color>
+<color id="12" inuse="0" name="Salmon" group="SOLID"></color>
+<color id="63" inuse="0" name="Chrome Pink" group="CHROME"></color>
+<color id="324" inuse="0" name="Rubber Red" group="RUBBER"></color>
+<color id="100" inuse="0" name="Light Salmon" group="SOLID"></color>
+<color id="68" inuse="0" name="Very Light Orange" group="SOLID"></color>
+<color id="350" inuse="0" name="Rubber Orange" group="RUBBER"></color>
+<color id="125" inuse="0" name="Light Orange" group="SOLID"></color>
+<color id="462" inuse="0" name="Medium Orange" group="SOLID"></color>
+<color id="450" inuse="0" name="Fabuland Brown" group="SOLID"></color>
+<color id="231" inuse="0" name="Trans Bright Light Orange" group="TRANSPARENT"></color>
+<color id="18" inuse="0" name="Light Yellow" group="SOLID"></color>
+<color id="54" inuse="0" name="Trans Neon Yellow" group="TRANSPARENT"></color>
+<color id="65" inuse="0" name="Rubber Yellow" group="RUBBER"></color>
+<color id="234" inuse="0" name="Trans Fire Yellow" group="TRANSPARENT"></color>
+<color id="490" inuse="0" name="Rubber Lime" group="RUBBER"></color>
+<color id="285" inuse="0" name="Trans Light Green" group="TRANSPARENT"></color>
+<color id="17" inuse="0" name="Light Green" group="SOLID"></color>
+<color id="21" inuse="0" name="Glow In Dark Opaque" group="MILKY"></color>
+<color id="39" inuse="0" name="Trans Very Light Blue" group="TRANSPARENT"></color>
+<color id="74" inuse="0" name="Medium Green" group="SOLID"></color>
+<color id="81" inuse="0" name="Metallic Green" group="METAL"></color>
+<color id="115" inuse="0" name="Medium Lime" group="SOLID"></color>
+<color id="120" inuse="0" name="Light Lime" group="SOLID"></color>
+<color id="62" inuse="0" name="Chrome Green" group="CHROME"></color>
+<color id="273" inuse="0" name="Rubber Blue" group="RUBBER"></color>
+<color id="23" inuse="0" name="Dark Blue Violet" group="SOLID"></color>
+<color id="61" inuse="0" name="Chrome Blue" group="CHROME"></color>
+<color id="89" inuse="0" name="Blue Violet" group="SOLID"></color>
+<color id="137" inuse="0" name="Metal Blue" group="PEARL"></color>
+<color id="3" inuse="0" name="Dark Turquoise" group="SOLID"></color>
+<color id="9" inuse="0" name="Light Blue" group="SOLID"></color>
+<color id="11" inuse="0" name="Light Turquoise" group="SOLID"></color>
+<color id="313" inuse="0" name="Maersk Blue" group="SOLID"></color>
+<color id="293" inuse="0" name="Trans Light Blue Violet" group="TRANSPARENT"></color>
+<color id="118" inuse="0" name="Aqua" group="SOLID"></color>
+<color id="232" inuse="0" name="Sky Blue" group="SOLID"></color>
+<color id="20" inuse="0" name="Light Violet" group="SOLID"></color>
+<color id="22" inuse="0" name="Purple" group="SOLID"></color>
+<color id="44" inuse="0" name="Trans Light Purple" group="TRANSPARENT"></color>
+<color id="69" inuse="0" name="Light Purple" group="SOLID"></color>
+<color id="373" inuse="0" name="Sand Purple" group="SOLID"></color>
+<color id="110" inuse="0" name="Violet" group="SOLID"></color>
+<color id="112" inuse="0" name="Medium Violet" group="SOLID"></color>
+<color id="129" inuse="0" name="Glitter Trans Purple" group="GLITTER"></color>
+<color id="218" inuse="0" name="Medium Purple" group="SOLID"></color>
+<color id="219" inuse="0" name="Medium Violet" group="SOLID"></color>
+<color id="45" inuse="0" name="Trans Pink" group="TRANSPARENT"></color>
+<color id="351" inuse="0" name="Medium Dark Pink" group="SOLID"></color>
+<color id="13" inuse="0" name="Pink" group="SOLID"></color>
+<color id="295" inuse="0" name="Flamingo Pink" group="SOLID"></color>
+<color id="77" inuse="0" name="Light Pink" group="SOLID"></color>
+<color id="114" inuse="0" name="Glitter Trans Dark Pink" group="GLITTER"></color>
+<color id="82" inuse="0" name="Metallic Gold" group="METAL"></color>
+<color id="334" inuse="0" name="Chrome Gold" group="CHROME"></color>
+<color id="142" inuse="0" name="Pearl Light Gold" group="PEARL"></color>
+<color id="134" inuse="0" name="Copper" group="PEARL"></color>
+<color id="189" inuse="0" name="Reddish Gold" group="PEARL"></color>
+<color id="87" inuse="0" name="Metallic Dark Gray" group="METAL"></color>
+<color id="80" inuse="0" name="Metallic Silver" group="METAL"></color>
+<color id="383" inuse="0" name="Chrome Silver" group="CHROME"></color>
+<color id="135" inuse="0" name="Pearl Light Gray" group="PEARL"></color>
+<color id="150" inuse="0" name="Pearl Very Light Gray" group="PEARL"></color>
+</colorgroups>
+

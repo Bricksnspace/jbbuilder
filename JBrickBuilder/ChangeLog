@@ -1,0 +1,52 @@
+2017-06-13  Mario Pascucci  <mpascucci@gmail.com>
+
+	* src/jBrickBuilder/jBrickBuilder.java (jBrickBuilder): moved to new LDrawLib with multiple library
+		switched to DBConnector
+		added new PovRay exporter (experimental)
+		general cleanup
+
+2017-02-17  Mario Pascucci  <mpascucci@gmail.com>
+
+	* src/jBrickBuilder/jBrickBuilder.java (jBrickBuilder): updated for stepper system init on new model
+	(actionPerformed): updated for stepper system init on new model
+
+2015-04-12  Mario Pascucci  <mpascucci@gmail.com>
+
+	* jBrickBuilder/AppGlobalSettings.java (static initializer): better check for button size
+
+2015-03-24  Mario Pascucci  <mpascucci@gmail.com>
+
+	* jBrickBuilder/LdrTableModel.java (parts): changed to more generic List<E>
+
+2015-03-06  Mario Pascucci  <mpascucci@gmail.com>
+
+	* jBrickBuilder/jBrickBuilder.java: almost total rewrite to move all model editing operation in
+		LDModelEditor
+
+2015-02-20  Mario Pascucci  <mpascucci@gmail.com>
+
+	* jBrickBuilder/jBrickBuilder.java: modified to use new comm channel with GL display and DrawHelpers. 
+		Added new controls for separate grid and cursor matrix
+
+2015-02-19  Mario Pascucci  <mpascucci@gmail.com>
+
+	* jBrickBuilder/jBrickBuilder.java (keyTyped): added hotkey for move
+
+2015-02-13  Mario Pascucci  <mpascucci@gmail.com>
+
+	* jBrickBuilder/AppGlobalSettings.java (LOWDETAILS): config var for low detail render
+	(PERSPECTIVE): config var for perspective/orthogonal projection
+	(ANTIALIAS): config var for antialias setting
+	* jBrickBuilder/jBrickBuilder.java (jBrickBuilder): added 22.5 degree angle to angle step
+	(jBrickBuilder): perspective and details preference settings saved.
+		Corrected a bug in saving preferences
+
+2015-02-12  Mario Pascucci  <mpascucci@gmail.com>
+
+	* jBrickBuilder/jBrickBuilder.java (doSaveSelected): save seleted parts as a block
+
+2015-02-11  Mario Pascucci  <mpascucci@gmail.com>
+
+	* jBrickBuilder/jBrickBuilder.java (clearSelection): utility function to clear selected part list 
+	(doSelectByPart): select part by design id/LDraw id 
+	(doSelectByColor): select part by color index
