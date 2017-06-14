@@ -131,7 +131,9 @@ public class jBrickBuilder implements ActionListener,
 	private final String colorXml = "colors.xml";
 	private final String LDRURL = "http://www.ldraw.org/library/updates/complete.zip";
 	private final String commentString = "0 // Created with JBrickBuilder";
-	private final String commentUrl= "0 // http://sourceforge.net/projects/jbrickbuilder/";
+	private final String commentUrl= "0 // https://github.com/Bricksnspace/jbbuilder";
+	private final String CONNURL = "https://github.com/Bricksnspace/brickDB/raw/master/jbb/ldrconn.zip";
+	private final String CONNVERSION = "https://github.com/Bricksnspace/brickDB/raw/master/jbb/VERSION";
 
 	// LDraw Library
 	private LDrawLib ldr;
@@ -605,7 +607,7 @@ public class jBrickBuilder implements ActionListener,
 			Logger.getGlobal().log(Level.SEVERE,"Connection database init error", e);
 		}
 		if (CheckUpdates.getZipVersion(ConnectionPoint.CONNZIP) < 
-				CheckUpdates.getUrlVersion(ConnectionPoint.CONNVERSION)) {
+				CheckUpdates.getUrlVersion(CONNVERSION)) {
 			JOptionPane.showMessageDialog(null, 
 					"There is a new version of Connection database.\n"
 					+ "Please update connections",
@@ -2338,7 +2340,7 @@ public class jBrickBuilder implements ActionListener,
 		busyDialog.setMsg("Downloading zip file...");
 		GetFileFromURL task;
 		try {
-			task = new GetFileFromURL(new URL(ConnectionPoint.CONNURL),new File(ConnectionPoint.CONNZIP),busyDialog);
+			task = new GetFileFromURL(new URL(CONNURL),new File(ConnectionPoint.CONNZIP),busyDialog);
 		} catch (MalformedURLException e) {
 			Logger.getGlobal().log(Level.SEVERE,"Invalid LDraw library download URL", e);
 			return;

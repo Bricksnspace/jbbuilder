@@ -65,7 +65,7 @@ public class CheckUpdates {
 		URLConnection connect = null;
 		InputStream urlStream = null;
 		try {
-			HttpURLConnection.setFollowRedirects(false);
+			HttpURLConnection.setFollowRedirects(true);
 			connect = updUrl.openConnection();
 			urlStream = connect.getInputStream();
 		}
