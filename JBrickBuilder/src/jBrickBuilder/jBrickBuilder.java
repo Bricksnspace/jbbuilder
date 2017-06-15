@@ -280,7 +280,7 @@ public class jBrickBuilder implements ActionListener,
 	
 	jBrickBuilder() {
 		
-		AppVersion.setMyVersion("0.5.3");
+		AppVersion.setMyVersion("0.5.4");
 
 		// logging system init
 		try {

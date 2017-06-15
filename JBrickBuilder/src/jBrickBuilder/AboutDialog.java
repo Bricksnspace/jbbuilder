@@ -74,7 +74,7 @@ public class AboutDialog extends JDialog implements ActionListener {
 		img.setBorder(BorderFactory.createEtchedBorder());
 		img.setAlignmentX(Component.CENTER_ALIGNMENT);
 		body.add(img);
-		prog = new JLabel("Version: "+AppVersion.myVersion()+"b",
+		prog = new JLabel("Version: "+AppVersion.myVersion(),
 				SwingConstants.CENTER);
 		prog.setAlignmentX(Component.CENTER_ALIGNMENT);
 		body.add(prog);
