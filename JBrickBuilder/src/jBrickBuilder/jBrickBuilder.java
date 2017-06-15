@@ -88,6 +88,8 @@ import javax.xml.stream.XMLStreamException;
 
 
 
+
+
 //import jbrickconnedit.MySettings;
 import bricksnspace.appsettings.AppSettings;
 import bricksnspace.appsettings.AppUIResolution;
@@ -203,7 +205,6 @@ public class jBrickBuilder implements ActionListener,
 	private LDrawColorDialog colorDialog;
 	private JToggleButton enableGrid;
 	private ImageIcon[] icnImg = new ImageIcon[4];
-	private JMenuItem mntmLdrParts;
 	private JMenuItem mntmAbout;
 	private JMenuItem mntmExit;
 	private ColorToolbar colorTool;
@@ -235,7 +236,6 @@ public class jBrickBuilder implements ActionListener,
 	private JButton dupBrick;
 	private JButton exportAsMpd;
 	private JToggleButton smoothPolygon;
-	private JMenuItem mntmLdrGet;
 	private JMenuItem mntmLdrConn;
 	private JButton selById;
 	private JButton selByColor;
@@ -680,22 +680,22 @@ public class jBrickBuilder implements ActionListener,
 		frame.setJMenuBar(menuBar);
 		
 
-		JMenu mnUpdateCatalogs = new JMenu("Catalogs");
-		menuBar.add(mnUpdateCatalogs);
+//		JMenu mnUpdateCatalogs = new JMenu("Catalogs");
+//		menuBar.add(mnUpdateCatalogs);
+//
+//		mntmLdrGet = new JMenuItem("Download LDraw library");
+//		mntmLdrGet.addActionListener(this);
+//		mnUpdateCatalogs.add(mntmLdrGet);
 
-		mntmLdrGet = new JMenuItem("Download LDraw library");
-		mntmLdrGet.addActionListener(this);
-		mnUpdateCatalogs.add(mntmLdrGet);
-
-		mntmLdrConn = new JMenuItem("Download connections database");
-		mntmLdrConn.addActionListener(this);
-		mnUpdateCatalogs.add(mntmLdrConn);
-		
-		mnUpdateCatalogs.addSeparator();
-		
-		mntmLdrParts = new JMenuItem("Refresh parts database");
-		mntmLdrParts.addActionListener(this);
-		mnUpdateCatalogs.add(mntmLdrParts);
+//		mntmLdrConn = new JMenuItem("Download connections database");
+//		mntmLdrConn.addActionListener(this);
+//		mnUpdateCatalogs.add(mntmLdrConn);
+//		
+//		mnUpdateCatalogs.addSeparator();
+//		
+//		mntmLdrParts = new JMenuItem("Refresh parts database");
+//		mntmLdrParts.addActionListener(this);
+//		mnUpdateCatalogs.add(mntmLdrParts);
 		
 		// last menu in top right 
 		JMenu mnProgram = new JMenu("Program");
@@ -706,6 +706,10 @@ public class jBrickBuilder implements ActionListener,
 		mntmOptions.addActionListener(this);
 		mnProgram.add(mntmOptions);
 
+		mntmLdrConn = new JMenuItem("Update connections database");
+		mntmLdrConn.addActionListener(this);
+		mnProgram.add(mntmLdrConn);
+		
 		mntmLibs = new JMenuItem("LDraw libraries...");
 		mntmLibs.addActionListener(this);
 		mnProgram.add(mntmLibs);
@@ -1416,8 +1420,8 @@ public class jBrickBuilder implements ActionListener,
 			// download library
 			boolean found = false;
 			for (int tries=0;tries<3;tries++) {
-				doLDrawLibDownload();
 				try {
+					doLDrawLibDownload();
 					ldr = new LDrawLib(AppSettings.get(MySettings.LDRAWZIP),dbc);
 					if (!ldr.isOfficial(LDrawLib.OFFICIALINDEX)) {
 						JOptionPane.showMessageDialog(null,
@@ -1428,7 +1432,7 @@ public class jBrickBuilder implements ActionListener,
 					}
 					found = true;
 					break;
-				} catch (IOException | SQLException e) {
+				} catch (IOException | SQLException | InterruptedException | ExecutionException | TimeoutException e) {
 					JOptionPane.showMessageDialog(null,
 							"Unable to use downloaded file\n" +
 							"Cause: "+e.getLocalizedMessage()+"\n"+
@@ -1915,15 +1919,15 @@ public class jBrickBuilder implements ActionListener,
 		else if (e.getSource() == panreset) {
 			modelEdit.resetView();
 		}
-		else if (e.getSource() == mntmLdrGet) {
-			doLDrawLibDownload();
-			JOptionPane.showMessageDialog(frame, 
-					"You must restart program to use new library\n",
-					"New library",JOptionPane.INFORMATION_MESSAGE);
-		}
-		else if (e.getSource() == mntmLdrParts) {
-			doPartDBUpdate();
-		}
+//		else if (e.getSource() == mntmLdrGet) {
+//			doLDrawLibDownload();
+//			JOptionPane.showMessageDialog(frame, 
+//					"You must restart program to use new library\n",
+//					"New library",JOptionPane.INFORMATION_MESSAGE);
+//		}
+//		else if (e.getSource() == mntmLdrParts) {
+//			doPartDBUpdate();
+//		}
 		else if (e.getSource() == mntmLdrConn) {
 			if (canProceedDiscard()) {
 				doConnDownload();
@@ -2290,46 +2294,35 @@ public class jBrickBuilder implements ActionListener,
 ////
 /////////////////////////////////////
 	
-	private void doLDrawLibDownload() {
+	
+	private void doLDrawLibDownload() throws MalformedURLException, InterruptedException, ExecutionException, TimeoutException {
 		
 		BusyDialog busyDialog = new BusyDialog(null,"Download LDraw library",true,icnImg);
 		busyDialog.setMsg("Downloading library...");
 		GetFileFromURL task;
-		try {
-			task = new GetFileFromURL(new URL(LDRURL),new File(AppSettings.get(MySettings.LDRAWZIP)),busyDialog);
-		} catch (MalformedURLException e) {
-			Logger.getGlobal().log(Level.SEVERE,"Invalid LDraw library download URL", e);
-			return;
-		}
+		task = new GetFileFromURL(new URL(LDRURL),new File(AppSettings.get(MySettings.LDRAWZIP)),busyDialog);
 		busyDialog.setTask(task);
 		busyDialog.startTask();
 		// after completing task return here
 		busyDialog.dispose();
-		try {
-			task.get(10, TimeUnit.MILLISECONDS);
-			busyDialog = new BusyDialog(frame,"Update part database",true,icnImg);
-		}
-		catch (ExecutionException | InterruptedException | TimeoutException ex) {
-			Logger.getGlobal().log(Level.SEVERE,"Execution interrupted", ex);
-			JOptionPane.showMessageDialog(frame, "Something goes wrong, program may not work with LDraw library.\nTry to download again.\n"+ex.getLocalizedMessage(), 
-					"Ldraw part update", JOptionPane.ERROR_MESSAGE);
-		}
-		try {
-			busyDialog.setMsg("Reading part from library...");
-			LDrawDBImportTask taskdb = new LDrawDBImportTask(ldr, LDrawLib.OFFICIALINDEX);
-			busyDialog.setTask(taskdb);
-			busyDialog.startTask();
-			// after completing task return here
-			busyDialog.dispose();
-			int i = taskdb.get(10, TimeUnit.MILLISECONDS);
-			JOptionPane.showMessageDialog(frame, "Imported "+i+" LDraw parts.", 
-						"Ldraw part database", JOptionPane.INFORMATION_MESSAGE);
-		}
-		catch (ExecutionException | InterruptedException | TimeoutException ex) {
-			Logger.getGlobal().log(Level.SEVERE,"Execution interrupted", ex);
-			JOptionPane.showMessageDialog(frame, "Something goes wrong, program may not work:\n"+ex.getLocalizedMessage(), 
-					"Ldraw part update", JOptionPane.ERROR_MESSAGE);
-		}
+		task.get(10, TimeUnit.MILLISECONDS);
+		busyDialog = new BusyDialog(frame,"Update part database",true,icnImg);
+//		try {
+//			busyDialog.setMsg("Reading part from library...");
+//			LDrawDBImportTask taskdb = new LDrawDBImportTask(ldr, LDrawLib.OFFICIALINDEX);
+//			busyDialog.setTask(taskdb);
+//			busyDialog.startTask();
+//			// after completing task return here
+//			busyDialog.dispose();
+//			int i = taskdb.get(10, TimeUnit.MILLISECONDS);
+//			JOptionPane.showMessageDialog(frame, "Imported "+i+" LDraw parts.", 
+//						"Ldraw part database", JOptionPane.INFORMATION_MESSAGE);
+//		}
+//		catch (ExecutionException | InterruptedException | TimeoutException ex) {
+//			Logger.getGlobal().log(Level.SEVERE,"Execution interrupted", ex);
+//			JOptionPane.showMessageDialog(frame, "Something goes wrong, program may not work:\n"+ex.getLocalizedMessage(), 
+//					"Ldraw part update", JOptionPane.ERROR_MESSAGE);
+//		}
 
 	}
 	
